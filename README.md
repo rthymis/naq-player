@@ -9,3 +9,5 @@ Features:
 - Fake visualizer
 - Responsive, simple and small design
 - Compatible with iOS, Android and supports all browsers Chrome, Firefox, Safari and more.
+
+View demo here: https://naquema.com/naq-player/
