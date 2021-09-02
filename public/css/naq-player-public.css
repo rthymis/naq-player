@@ -1,0 +1,76 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+#naqPlayerMain {
+  display:flex;
+  align-items: center;
+  /* background-color: black; */
+  justify-content: space-evenly;
+  padding: 10px;
+  max-width: 600px;
+}
+
+#naqPlayerPlay {
+  cursor: pointer;
+  height:60px;
+}
+
+.playImage {
+  width:60px;
+}
+
+#naqVolumeControls {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#increase, #decrease {
+  width: 29.23px;
+  height: 29.23px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+
+  color: #000000;
+  /* display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; */
+  line-height: 25px;
+  /* margin-bottom: 10px; */
+}
+
+#naqPlayerMute {
+  width: 40px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#showVolume {
+  color: #ff5e57;
+  font-family: arial;
+  cursor: context-menu;
+}
+
+#increase, #decrease, #naqPlayerMute, #showVolume {
+
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+#naqPlayerLoading {
+  color: #ff5e57;
+  /* background-color: black; */
+}
+
+#animation {
+
+width: 60px;
+height: 60px;
+
+}
