@@ -17,19 +17,19 @@ function playOrPauseStream() {
   if (stream.paused) {
     stream.load(); // re-load stream or else after pause and play again it will start from where it was paused
     stream.play();
-    
+    // change underneath the size of the loading icon
     $("#naqPlayerPlay").html('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="60px" height="60px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><circle id="naqLoadingSvg" cx="50" cy="50" r="32" stroke-width="8" stroke="#000000" stroke-dasharray="50.26548245743669 50.26548245743669" fill="none" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" keyTimes="0;1" values="0 50 50;360 50 50"></animateTransform></circle></svg>');
     
     document.getElementById("naqLoadingSvg").style.stroke = naqColor;
   }
   else { 
           stream.pause();
-          
+          // change underneath the size of the SECOND play button
           $("#naqPlayerPlay").html('<svg id="naqPlaySvg" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\" width=\"60\" height=\"60\" viewBox=\"0 0 600 600\"><defs></defs><path d=\"M600.000,300.000 L-0.000,600.003 L-0.000,-0.003 L600.000,300.000 Z\" class=\"cls-1\"/></svg>');
           
           document.getElementById("naqPlaySvg").style.fill = naqColor;
-          
-          $("#animation").html('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="60px" height="60px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><rect class="naqEqSvg" x="83.9" y="79.7"  width="10" height="7.8"/><line class="st0" x1="83.9" y1="79.7" x2="93.9" y2="79.7"/><rect class="naqEqSvg" x="72.8" y="79.7"  width="10" height="7.8"/><line class="st0" x1="72.8" y1="79.7" x2="82.8" y2="79.7"/><rect class="naqEqSvg" x="61.7" y="79.7"  width="10" height="7.8"/><line class="st0" x1="61.7" y1="79.7" x2="71.7" y2="79.7"/><rect class="naqEqSvg" x="50.6" y="79.7"  width="10" height="7.8"/><line class="st0" x1="50.6" y1="79.7" x2="60.6" y2="79.7"/><rect class="naqEqSvg" x="39.4" y="79.7"  width="10" height="7.8"/><line class="st0" x1="39.4" y1="79.7" x2="49.4" y2="79.7"/><rect class="naqEqSvg" x="28.3" y="79.7"  width="10" height="7.8"/><line class="st0" x1="28.3" y1="79.7" x2="38.3" y2="79.7"/><line class="st0" x1="17.2" y1="79.7" x2="27.2" y2="79.7"/><rect class="naqEqSvg" x="17.2" y="79.7"  width="10" height="7.8"/><line class="st0" x1="6.1" y1="79.7" x2="16.1" y2="79.7"/><rect class="naqEqSvg" x="6.1" y="79.7"  width="10" height="7.8"/></g></svg>');
+          // change underneath the SECOND INACTIVE EQ
+          $("#animation").html('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="60px" height="60px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="rotate(180 50 50)"><rect class="naqEqSvg" x="0" y="0" width="10" height="10" ></rect><rect class="naqEqSvg" x="11.1" y="0" width="10" height="10" ></rect><rect class="naqEqSvg" x="22.2" y="0" width="10" height="10" ></rect><rect class="naqEqSvg" x="33.3" y="0" width="10" height="10" ></rect><rect class="naqEqSvg" x="44.4" y="0" width="10" height="10" ></rect><rect class="naqEqSvg" x="55.5" y="0" width="10" height="10" ></rect><rect class="naqEqSvg" x="66.6" y="0" width="10" height="10" ></rect><rect class="naqEqSvg" x="77.7" y="0" width="10" height="10" ></rect><rect class="naqEqSvg" x="88.8" y="0" width="10" height="10" ></rect></g></svg>');
           
           var all = document.getElementsByClassName('naqEqSvg');
           
@@ -105,21 +105,21 @@ window.onload = function showVolume() {
   }
 
   // Hide Volume Controls if checkbox on plugin settings page is checked
-  if ( naqCheckboxVolume == 1 ) {
-    document.getElementById("naqVolumeControls").style.display = 'none';
-  }
+  // if ( naqCheckboxVolume == 1 ) {
+  //   document.getElementById("naqVolumeControls").style.display = 'none';
+  // }
       
   // Hide EQ gif icon if checkbox on plugin settings page is checked
-    if ( naqCheckboxEQ == 1 ) {
-    document.getElementById("animation").style.display = 'none';
-  }
+  //   if ( naqCheckboxEQ == 1 ) {
+  //   document.getElementById("animation").style.display = 'none';
+  // }
       
   // Apply dynamic colors to the Volume Controls
-  document.getElementById("increase").style.backgroundColor = naqColor;
-  document.getElementById("decrease").style.backgroundColor = naqColor;
-  document.getElementById("increase").style.color = naqTextColor;
-  document.getElementById("decrease").style.color = naqTextColor;
-  document.getElementById("showVolume").style.color = naqColor;
+  // document.getElementById("increase").style.backgroundColor = naqColor;
+  // document.getElementById("decrease").style.backgroundColor = naqColor;
+  // document.getElementById("increase").style.color = naqTextColor;
+  // document.getElementById("decrease").style.color = naqTextColor;
+  // document.getElementById("showVolume").style.color = naqColor;
   document.getElementById("showVolume").innerHTML = getVolume();
 
   // Hide the highlighting of the player's button when double clicking on them
@@ -132,12 +132,12 @@ window.onload = function showVolume() {
 
 // Events that occur when the audio playing starts: Play Button turns to Pause Button and static EQ icon turns to animated EQ gif icon
 stream.addEventListener('playing', (event) => {
-
+  // change underneath the size of the PAUSE button
   $("#naqPlayerPlay").html('<svg id="naqPauseSvg" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\" width=\"60\" height=\"60\" viewBox=\"0 0 600 600\"><defs></defs><g><rect width=\"230\" height=\"600\" class=\"cls-1\"/><rect x=\"370\" width=\"230\" height=\"600\" class=\"cls-1\"/></g></svg>');
 
   document.getElementById("naqPauseSvg").style.fill = naqColor;
-
-  $("#animation").html('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="60px" height="60px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="rotate(180 50 50)"><rect class="naqEqSvg" x="6.111111111111111" y="12.5" width="10" height="40" ><animate attributeName="height" calcMode="spline" values="50;75;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.46875s"></animate></rect><rect class="naqEqSvg" x="17.22222222222222" y="12.5" width="10" height="40" ><animate attributeName="height" calcMode="spline" values="50;75;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.78125s"></animate></rect><rect class="naqEqSvg" x="28.333333333333336" y="12.5" width="10" height="40" ><animate attributeName="height" calcMode="spline" values="50;75;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.9375s"></animate></rect><rect class="naqEqSvg" x="39.44444444444444" y="12.5" width="10" height="40" ><animate attributeName="height" calcMode="spline" values="50;75;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="0s"></animate></rect><rect class="naqEqSvg" x="50.55555555555556" y="12.5" width="10" height="40" ><animate attributeName="height" calcMode="spline" values="50;75;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-1.09375s"></animate></rect><rect class="naqEqSvg" x="61.66666666666667" y="12.5" width="10" height="40" ><animate attributeName="height" calcMode="spline" values="50;75;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.625s"></animate></rect><rect class="naqEqSvg" x="72.77777777777777" y="12.5" width="10" height="40" ><animate attributeName="height" calcMode="spline" values="50;75;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.15625s"></animate></rect><rect class="naqEqSvg" x="83.88888888888889" y="12.5" width="10" height="40" ><animate attributeName="height" calcMode="spline" values="50;75;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.3125s"></animate></rect></g></svg>');
+  // change underneath the size of the ACTIVE EQ
+  $("#animation").html('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="60px" height="60px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="rotate(180 50 50)"><rect class="naqEqSvg" x="0" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.46875s"></animate></rect><rect class="naqEqSvg" x="11.1" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.78125s"></animate></rect><rect class="naqEqSvg" x="22.2" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.9375s"></animate></rect><rect class="naqEqSvg" x="33.3" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="0s"></animate></rect><rect class="naqEqSvg" x="44.4" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-1.09375s"></animate></rect><rect class="naqEqSvg" x="55.5" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.625s"></animate></rect><rect class="naqEqSvg" x="66.6" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.15625s"></animate></rect><rect class="naqEqSvg" x="77.7" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.3125s"></animate></rect><rect class="naqEqSvg" x="88.8" y="0" width="10" height="60" ><animate attributeName="height" calcMode="spline" values="50;90;10;50" times="0;0.33;0.66;1" dur="1.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" repeatCount="indefinite" begin="-0.8375s"></animate></rect></g></svg>');
 
   var all = document.getElementsByClassName('naqEqSvg');
 

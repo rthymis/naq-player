@@ -192,6 +192,26 @@ class Naq_Player_Admin {
         'myplugin_settings_section'
     );
 
+    // Register checkbox for transparent background volume
+register_setting(
+    'myplugin-settings-page',
+    'naqPlayerCheckboxTransparentBackgroundVolume',
+    array(
+        'type' => 'string',
+        'sanitize_callback' => 'sanitize_text_field',
+        'default' => ''
+    )
+);
+
+// Add checkbox for transparent background volume
+add_settings_field(
+    'naqPlayerCheckboxTransparentBackgroundVolume',
+    __( 'Volume Transparent Background:', 'naq-player' ),
+    array( $this, 'naqplayer_settings_checkbox_transparent_background_volume_callback'),
+    'myplugin-settings-page',
+    'myplugin_settings_section'
+);
+
 		// Register checkbox for Volume Controls
     register_setting(
         'myplugin-settings-page',
@@ -279,12 +299,14 @@ public function naqplayer_settings_checkbox_eq_callback() {
     <?php
 }
 
-
-
-
-
-
-
-
+public function naqplayer_settings_checkbox_transparent_background_volume_callback() {
+    $myplugin_checkbox_transparent_background_volume = get_option('naqPlayerCheckboxTransparentBackgroundVolume');
+    ?>
+    <input type="checkbox" name="naqPlayerCheckboxTransparentBackgroundVolume" value="1" <?php checked( '1', $myplugin_checkbox_transparent_background_volume ); ?> />
+    <?php
+}
 
 }
+
+
+

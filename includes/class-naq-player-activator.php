@@ -25,6 +25,11 @@ class Naq_Player_Activator {
 		add_option ('naqPlayerTextColor', '#2c3e50');
 		add_option ('naqPlayerCheckboxVolume');
 		add_option ('naqPlayerCheckboxEQ');
+		add_option ('naqPlayerCheckboxTransparentBackgroundVolume');
 	}
 
 }
+
+
+
+

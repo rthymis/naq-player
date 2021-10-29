@@ -124,12 +124,10 @@
    		 */
    		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-naq-player-public.php';
 
-      /**
+      	/**
    		 * The class responsible for defining all widgets.
    		 */
    		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'widgets/naq-player-widget.php';
-
-
 
    		$this->loader = new Naq_Player_Loader();
 
@@ -165,11 +163,9 @@
 
   		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
   		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-      $this->loader->add_action( 'admin_menu', $plugin_admin, 'naq_player_menu' );
-      $this->loader->add_action( 'admin_init', $plugin_admin, 'myplugin_settings_init' );
-      $this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );
-
-
+      	$this->loader->add_action( 'admin_menu', $plugin_admin, 'naq_player_menu' );
+      	$this->loader->add_action( 'admin_init', $plugin_admin, 'myplugin_settings_init' );
+      	$this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );
   	}
 
     /**
@@ -185,10 +181,7 @@
 
   		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
   		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-      $this->loader->add_action( 'init', $plugin_public, 'register_shortcodes' );
-
-
-
+      	$this->loader->add_action( 'init', $plugin_public, 'register_shortcodes' );
   	}
 
     /**

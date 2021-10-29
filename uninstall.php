@@ -36,3 +36,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	delete_option ('naqPlayerTextColor');
 	delete_option ('naqPlayerCheckboxVolume');
 	delete_option ('naqPlayerCheckboxEQ');
+	delete_option ('naqPlayerCheckboxTransparentBackgroundVolume');
+
+
+	

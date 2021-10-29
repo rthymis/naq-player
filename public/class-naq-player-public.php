@@ -73,7 +73,7 @@ class Naq_Player_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( 'yoooooogghh', plugin_dir_url( __FILE__ ) . 'css/naq-player-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( 'naq-player-public-css', plugin_dir_url( __FILE__ ) . 'css/naq-player-public.css', array(), $this->version, 'all' );
 
 	}
 
