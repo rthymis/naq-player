@@ -109,7 +109,10 @@ class Naq_Player_Public {
 		wp_localize_script( 'naq-player-public-js', 'myCheckboxVolume', $my_Checkbox_Volume);
 		wp_localize_script( 'naq-player-public-js', 'myCheckboxEQ', $my_Checkbox_EQ);
 
-		wp_enqueue_script( 'naq-player-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array( 'jquery' ), $this->version, false );
+		// wp_enqueue_script( 'naq-player-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array( 'jquery' ), $this->version, false );
+
+		wp_enqueue_script('jquery'); 
+
 
 	}
 
